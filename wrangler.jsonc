@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "nassau-cruise-excursions",
+  "compatibility_date": "2026-06-02",
+  "observability": { "enabled": true },
+  "assets": { "directory": "." },
+  "routes": [
+    {
+      "pattern": "nassaucruiseexcursions.com",
+      "custom_domain": true
+    }
+  ]
+}
