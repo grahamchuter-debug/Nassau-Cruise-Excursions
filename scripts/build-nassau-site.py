@@ -313,7 +313,7 @@ def main() -> None:
             data_page="snorkelling",
             hero="partials/hero-snorkelling.html",
             content="content/nassau-snorkelling-tours.html",
-            preload="images/snorkeling-tour.jpg",
+            preload="images/snorkelling-hero.png",
         ),
         dict(
             file="nassau-private-tours.html",
@@ -589,8 +589,8 @@ def _hero_snorkelling() -> str:
         "Nassau · Bahamas · Caribbean",
         "Nassau <span class=\"text-teal-300\">Snorkelling</span><br/>Tours",
         "Rose Island reefs, catamaran snorkel sails and clear Bahamian water with cruise-friendly return times.",
-        "images/snorkeling-tour.jpg",
-        "Snorkelling in clear turquoise water on a Nassau Bahamas reef tour",
+        "images/snorkelling-hero.png",
+        "Snorkelling excursion from Nassau Bahamas with tropical fish and coral reefs",
         breadcrumb="Snorkelling Tours",
     )
 
@@ -855,7 +855,7 @@ def _content_snorkelling() -> str:
           <p class="text-gray-600 text-sm leading-relaxed"><strong>Rose Island</strong> trips reach shallow reefs with parrotfish and sergeant majors; good for beginners. Reef-safe sunscreen is encouraged to protect Bahamian coral.</p>
         </div>
         <div class="card-media rounded-3xl overflow-hidden h-64">
-          <img src="images/reef-snorkel-nassau.jpg" alt="Reef snorkelling with tropical fish on a Nassau Bahamas tour" width="600" height="400" loading="lazy" decoding="async" />
+          <img src="images/snorkelling-hero.png" alt="Snorkelling excursion from Nassau Bahamas with tropical fish and coral reefs" width="600" height="400" loading="lazy" decoding="async" />
         </div>
       </div>
     </div></section>"""
