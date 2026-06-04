@@ -707,10 +707,10 @@ def _card_grid(cards: list[tuple]) -> str:
 
 def _content_home() -> str:
     cards = _card_grid([
-        ("images/beach-excursion.jpg", "Cable Beach Nassau with white sand and turquoise Bahamian water", "Nassau Beaches", "Cable Beach, Cabbage Beach and resort beach days a short taxi from Prince George Wharf.", "nassau-beaches.html", "Explore Beaches"),
-        ("images/snorkeling-tour.jpg", "Snorkelling on a coral reef near Nassau Bahamas", "Snorkelling Tours", "Catamaran sails and Rose Island reef stops with gear included and cruise-friendly returns.", "nassau-snorkelling-tours.html", "View Snorkelling"),
-        ("images/private-vip-island-tour.jpg", "Atlantis Paradise Island resort near Nassau cruise port", "Atlantis Resort", "Day passes, Aquaventure and marine habitats on Paradise Island with organised transfers.", "atlantis-resort-excursions.html", "Atlantis Guide"),
-        ("images/catamaran-snorkel-sail.jpg", "Boat tour to swimming pigs beach in the Bahamas from Nassau", "Swimming Pigs", "Rose Island pig beach or full-day Exuma Cays adventures — confirm duration vs your port time.", "swimming-pigs-excursions.html", "Swimming Pigs"),
+        ("images/cable-beach-hero.png", "Cable Beach in Nassau Bahamas with white sand and turquoise Caribbean water", "Nassau Beaches", "Cable Beach, Cabbage Beach and resort beach days a short taxi from Prince George Wharf.", "nassau-beaches.html", "Explore Beaches"),
+        ("images/snorkelling-hero.png", "Snorkelling excursion from Nassau Bahamas with tropical fish and coral reefs", "Snorkelling Tours", "Catamaran sails and Rose Island reef stops with gear included and cruise-friendly returns.", "nassau-snorkelling-tours.html", "View Snorkelling"),
+        ("images/atlantis-hero.png", "Atlantis Paradise Island resort and water park excursion from Nassau cruise port", "Atlantis Resort", "Day passes, Aquaventure and marine habitats on Paradise Island with organised transfers.", "atlantis-resort-excursions.html", "Atlantis Guide"),
+        ("images/swimming-pigs-hero.png", "Cruise passengers swimming with pigs near Nassau Bahamas on a shore excursion", "Swimming Pigs", "Rose Island pig beach or full-day Exuma Cays adventures — confirm duration vs your port time.", "swimming-pigs-excursions.html", "Swimming Pigs"),
     ])
     return f"""<section class="pt-8 pb-16 bg-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid lg:grid-cols-2 gap-12 items-center">
       <div>
@@ -741,10 +741,10 @@ def _content_home() -> str:
 
 def _content_best() -> str:
     cards = _card_grid([
-        ("images/beach-excursion.jpg", "Cable Beach Nassau with white sand and turquoise Bahamian water", "Nassau Beaches", "Cable Beach, Cabbage Beach and resort beach days a short taxi from Prince George Wharf.", "nassau-beaches.html", "Explore Beaches"),
-        ("images/snorkeling-tour.jpg", "Snorkelling on a coral reef near Nassau Bahamas", "Snorkelling Tours", "Catamaran sails and Rose Island reef stops with gear included and cruise-friendly returns.", "nassau-snorkelling-tours.html", "View Snorkelling"),
-        ("images/private-vip-island-tour.jpg", "Atlantis Paradise Island resort near Nassau cruise port", "Atlantis Resort", "Day passes, Aquaventure and marine habitats on Paradise Island with organised transfers.", "atlantis-resort-excursions.html", "Atlantis Guide"),
-        ("images/catamaran-snorkel-sail.jpg", "Boat tour to swimming pigs beach in the Bahamas from Nassau", "Swimming Pigs", "Rose Island pig beach or full-day Exuma Cays adventures — confirm duration vs your port time.", "swimming-pigs-excursions.html", "Swimming Pigs"),
+        ("images/cable-beach-hero.png", "Cable Beach in Nassau Bahamas with white sand and turquoise Caribbean water", "Nassau Beaches", "Cable Beach, Cabbage Beach and resort beach days a short taxi from Prince George Wharf.", "nassau-beaches.html", "Explore Beaches"),
+        ("images/snorkelling-hero.png", "Snorkelling excursion from Nassau Bahamas with tropical fish and coral reefs", "Snorkelling Tours", "Catamaran sails and Rose Island reef stops with gear included and cruise-friendly returns.", "nassau-snorkelling-tours.html", "View Snorkelling"),
+        ("images/atlantis-hero.png", "Atlantis Paradise Island resort and water park excursion from Nassau cruise port", "Atlantis Resort", "Day passes, Aquaventure and marine habitats on Paradise Island with organised transfers.", "atlantis-resort-excursions.html", "Atlantis Guide"),
+        ("images/swimming-pigs-hero.png", "Cruise passengers swimming with pigs near Nassau Bahamas on a shore excursion", "Swimming Pigs", "Rose Island pig beach or full-day Exuma Cays adventures — confirm duration vs your port time.", "swimming-pigs-excursions.html", "Swimming Pigs"),
     ])
     return f"""<section class="pt-8 pb-12 bg-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid lg:grid-cols-2 gap-12 items-center">
       <div>
