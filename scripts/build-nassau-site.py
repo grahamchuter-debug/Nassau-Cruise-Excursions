@@ -721,7 +721,7 @@ def _content_home() -> str:
         <a href="best-nassau-cruise-excursions.html" class="btn-ocean inline-flex items-center gap-2 text-white font-semibold px-7 py-3.5 rounded-full text-sm shadow-lg">Browse All Excursions</a>
       </div>
       <div class="info-image rounded-3xl aspect-[4/3] shadow-2xl overflow-hidden">
-        <img src="images/nassau-beach.jpg" alt="Turquoise water and white sand beach near Nassau Bahamas for cruise passengers" width="800" height="600" loading="lazy" decoding="async" />
+        <img src="images/nassau-intro.png" alt="Aerial view of Paradise Island and Atlantis Resort in Nassau Bahamas near the cruise port" width="800" height="600" loading="lazy" decoding="async" />
       </div>
     </div></div></section>
     <section class="py-20 bg-amber-50"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -755,7 +755,7 @@ def _content_best() -> str:
         <a href="nassau-cruise-port-guide.html" class="text-ocean-600 font-semibold text-sm hover:text-teal-600">Read the port guide →</a>
       </div>
       <div class="info-image rounded-3xl aspect-[4/3] shadow-2xl overflow-hidden">
-        <img src="images/nassau-beach.jpg" alt="Turquoise water and white sand beach near Nassau Bahamas for cruise passengers" width="800" height="600" loading="lazy" decoding="async" />
+        <img src="images/nassau-intro.png" alt="Aerial view of Paradise Island and Atlantis Resort in Nassau Bahamas near the cruise port" width="800" height="600" loading="lazy" decoding="async" />
       </div>
     </div></div></section>
     <section class="py-20 bg-amber-50"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
