@@ -18,7 +18,7 @@ def page_shell(
     data_page: str,
     hero: str,
     content: str,
-    preload: str = "images/hero-nassau.jpg",
+    preload: str = "images/hero-nassau.png",
     schema: dict | None = None,
     trust: bool = True,
 ) -> str:
@@ -280,7 +280,7 @@ def main() -> None:
             data_page="beaches",
             hero="partials/hero-beaches.html",
             content="content/nassau-beaches.html",
-            preload="images/nassau-beach.jpg",
+            preload="images/cable-beach-hero.png",
         ),
         dict(
             file="atlantis-resort-excursions.html",
@@ -291,7 +291,7 @@ def main() -> None:
             data_page="excursions",
             hero="partials/hero-atlantis.html",
             content="content/atlantis-resort-excursions.html",
-            preload="images/private-vip-island-tour.jpg",
+            preload="images/atlantis-hero.png",
         ),
         dict(
             file="swimming-pigs-excursions.html",
@@ -302,7 +302,7 @@ def main() -> None:
             data_page="excursions",
             hero="partials/hero-swimming-pigs.html",
             content="content/swimming-pigs-excursions.html",
-            preload="images/catamaran-snorkel-sail.jpg",
+            preload="images/swimming-pigs-hero.png",
         ),
         dict(
             file="nassau-snorkelling-tours.html",
@@ -379,7 +379,7 @@ def main() -> None:
                 data_page=p["data_page"],
                 hero=p["hero"],
                 content=f"content/{p['content'].split('/')[-1]}",
-                preload=p.get("preload", "images/hero-nassau.jpg"),
+                preload=p.get("preload", "images/hero-nassau.png"),
                 schema=p.get("schema"),
             ),
         )
@@ -494,7 +494,7 @@ echo "Done. Check {DOMAIN}/ shortly."
     css_path = ROOT / "css" / "site.css"
     css = css_path.read_text(encoding="utf-8")
     css = css.replace("magens-bay-beach.jpg", "nassau-beach.jpg")
-    css = css.replace("hero-st-thomas-magens-bay.jpg", "hero-nassau.jpg")
+    css = css.replace("hero-st-thomas-magens-bay.jpg", "hero-nassau.png")
     css = css.replace("kayak-hike-snorkel-st-thomas.jpg", "kayak-snorkel-nassau.jpg")
     css_path.write_text(css, encoding="utf-8")
     print("  patched css/site.css")
@@ -510,7 +510,7 @@ def _hero_wave() -> str:
 
 def _hero_home() -> str:
     return f"""  <section class="site-hero">
-    <div class="absolute inset-0 hero-bg" role="img" aria-label="Turquoise water and white sand beach near Nassau, Bahamas cruise port"></div>
+    <div class="absolute inset-0 hero-bg" role="img" aria-label="Aerial view of Paradise Island and Atlantis Resort in Nassau Bahamas near the cruise port"></div>
     <div class="site-hero__inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl">
         <div class="site-hero__eyebrow inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/30 rounded-full px-4 py-1.5 mb-3">
@@ -544,8 +544,8 @@ def _hero_excursions() -> str:
         "Cruise Port · Nassau Bahamas",
         "Best Nassau<br/><span class=\"text-teal-300\">Cruise Excursions</span>",
         "Compare Atlantis passes, swimming pigs, beaches, snorkelling sails and private tours built for your ship's timetable.",
-        "images/hero-nassau.jpg",
-        "Aerial view of turquoise Bahamian waters near Nassau for cruise shore excursions",
+        "images/hero-nassau.png",
+        "Aerial view of Paradise Island and Atlantis Resort in Nassau Bahamas near the cruise port",
     )
 
 
@@ -567,8 +567,8 @@ def _hero_one_day() -> str:
         "Cruise Port Planning Guide",
         "One Perfect Day<br/><span class=\"text-teal-300\">in Nassau</span>",
         "Sample itineraries for beaches, Atlantis, swimming pigs, downtown Bay Street and snorkelling with return-to-ship timing.",
-        "images/hero-nassau.jpg",
-        "Nassau Bahamas harbour and turquoise Caribbean water for cruise day planning",
+        "images/hero-nassau.png",
+        "Aerial view of Paradise Island and Atlantis Resort in Nassau Bahamas near the cruise port",
         breadcrumb="One Day in Nassau",
     )
 
@@ -578,8 +578,8 @@ def _hero_beaches() -> str:
         "Nassau · Bahamas · Caribbean",
         "Best <span class=\"text-teal-300\">Nassau Beaches</span><br/>for Cruise Guests",
         "Cable Beach, Cabbage Beach on Paradise Island and calm bays — all reachable on a typical port day.",
-        "images/nassau-beach.jpg",
-        "White sand beach with turquoise water at Cable Beach near Nassau Bahamas",
+        "images/cable-beach-hero.png",
+        "Cable Beach in Nassau Bahamas with white sand and turquoise Caribbean water",
         breadcrumb="Nassau Beaches",
     )
 
@@ -611,8 +611,8 @@ def _hero_faq() -> str:
         "Cruise Passenger Planning Guide",
         "Nassau Cruise<br/><span class=\"text-teal-300\">Excursions FAQ</span>",
         "Clear answers on port timing, currency, Atlantis, swimming pigs, taxis and independent excursions.",
-        "images/hero-nassau.jpg",
-        "Nassau Bahamas cruise port with harbour and island views",
+        "images/hero-nassau.png",
+        "Aerial view of Paradise Island and Atlantis Resort in Nassau Bahamas near the cruise port",
         breadcrumb="FAQ",
     )
 
@@ -622,8 +622,8 @@ def _hero_atlantis() -> str:
         "Paradise Island · Bahamas",
         "Atlantis Resort<br/><span class=\"text-teal-300\">Excursions</span>",
         "Day passes, Aquaventure, marine habitats and beach club access with transfers from the cruise pier.",
-        "images/private-vip-island-tour.jpg",
-        "Atlantis Paradise Island resort towers and marina near Nassau Bahamas",
+        "images/atlantis-hero.png",
+        "Atlantis Paradise Island resort and water park excursion from Nassau cruise port",
         breadcrumb="Atlantis Excursions",
     )
 
@@ -633,8 +633,8 @@ def _hero_pigs() -> str:
         "Bahamas Iconic Experience",
         "Swimming Pigs<br/><span class=\"text-teal-300\">Excursions</span>",
         "Rose Island pig beach and longer Exuma Cays boat trips — timed for cruise schedules.",
-        "images/catamaran-snorkel-sail.jpg",
-        "Boat excursion on turquoise Bahamian water for swimming pigs tour from Nassau",
+        "images/swimming-pigs-hero.png",
+        "Cruise passengers swimming with pigs near Nassau Bahamas on a shore excursion",
         breadcrumb="Swimming Pigs",
     )
 
