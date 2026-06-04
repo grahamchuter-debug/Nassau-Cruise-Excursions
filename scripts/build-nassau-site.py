@@ -510,7 +510,12 @@ def _hero_wave() -> str:
 
 def _hero_home() -> str:
     return f"""  <section class="site-hero">
-    <div class="absolute inset-0 hero-bg" role="img" aria-label="Aerial view of Paradise Island and Atlantis Resort in Nassau Bahamas near the cruise port"></div>
+    <div
+      class="absolute inset-0 hero-bg"
+      style="background-image: linear-gradient(135deg, rgba(7, 89, 133, 0.72) 0%, rgba(13, 148, 136, 0.52) 60%, rgba(0, 0, 0, 0.35) 100%), url('images/hero-nassau.png'); background-size: cover; background-position: center; background-repeat: no-repeat;"
+      role="img"
+      aria-label="Aerial view of Paradise Island and Atlantis Resort in Nassau Bahamas near the cruise port"
+    ></div>
     <div class="site-hero__inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl">
         <div class="site-hero__eyebrow inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/30 rounded-full px-4 py-1.5 mb-3">
