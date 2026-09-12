@@ -334,7 +334,7 @@ def build_home() -> None:
         ),
         (
             "Can I book tours on this site yet?",
-            "Not yet. This site is an editorial planning guide. Online booking may be added later for a simple Nassau walking experience; until then, use the guides to choose a day style that fits your call.",
+            "A request-to-book journey for the Explore Nassau Walking Tour is prepared on this site. Live card checkout opens once payment rails are unlocked. Until then, email hello@nassaucruiseexcursions.com. Other day styles remain editorial planning guides.",
         ),
     ]
     faq_schema = {
@@ -352,7 +352,7 @@ def build_home() -> None:
         ("Beach day", "Near-port sand vs a longer taxi beach — match distance to your return window.", "/nassau-beaches", "Beach"),
         ("Atlantis", "Paradise Island as a place/experience option — plan transfers and access carefully.", "/atlantis-resort-excursions", "Atlantis"),
         ("Snorkelling / water", "Boat reefs and island stops that fit half-day or longer calls.", "/nassau-snorkelling-tours", "Water"),
-        ("See Nassau", "Walkable downtown history and harbour streets when you want the city itself.", "/one-day-in-nassau", "Town"),
+        ("See Nassau", "Explore Nassau Walking Tour — guided historic downtown walking you can request online.", "/book/explore-nassau-walking-tour", "Town"),
         ("Private tour", "When a custom pace helps families or mixed interests.", "/nassau-private-tours", "Private"),
         ("Short port day", "What fits — and what to skip — when time ashore is tight.", "/one-day-in-nassau", "Short call"),
     ]
@@ -386,7 +386,7 @@ def build_home() -> None:
                 ("Beach day", "/nassau-beaches"),
                 ("Atlantis", "/atlantis-resort-excursions"),
                 ("Snorkelling", "/nassau-snorkelling-tours"),
-                ("See Nassau", "/one-day-in-nassau"),
+                ("See Nassau", "/book/explore-nassau-walking-tour"),
             ],
             aria="Stylised Nassau cruise-port atmosphere",
         ),
@@ -464,7 +464,7 @@ def build_home() -> None:
 def build_best() -> None:
     rows = [
         ("Beach day", "Half day+", "Near Junkanoo (walk/short ride) or taxi to Cable / Paradise Island beaches", "Families, first-timers, low-effort sand", "Traffic and chair/facility unknowns — leave return buffer", "/nassau-beaches"),
-        ("Walking / city", "1.5–3 hours", "Starts near downtown / pier area", "History, photos, lighter mobility than boat days", "Heat, uneven streets, stairs at some sites", "/one-day-in-nassau"),
+        ("Walking / city", "1.5–3 hours", "Starts near downtown / pier area", "History, photos, lighter mobility than boat days", "Heat, uneven streets, stairs at some sites", "/book/explore-nassau-walking-tour"),
         ("Snorkel / boat", "Half day typical", "Boat meeting near harbour; exact point on operator ticket", "Groups who want water without a full island day", "Weather, swim ability, ladder boarding", "/nassau-snorkelling-tours"),
         ("Paradise Island / Atlantis-type day", "Often 5–6 hours with transfers", "Taxi, ferry, or excursion transfer across the harbour", "Families chasing a resort-scale day", "Access rules, queues, transfer time — verify independently", "/atlantis-resort-excursions"),
         ("Private plan", "Flexible", "Driver meet near pier (confirm on booking)", "Mixed ages, custom stops, tighter timing control", "Cost; still needs buffer for traffic", "/nassau-private-tours"),
@@ -502,7 +502,8 @@ def build_best() -> None:
 <section class="py-14 bg-white">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> · Best excursions</nav>
-    <p class="text-gray-600 leading-relaxed">This page compares <strong>day styles</strong> cruise guests actually choose from Nassau. It does not invent star ratings, “most popular” claims, or live inventory. When online booking launches, it will likely start with a simple downtown walking option — not a full catalogue.</p>
+    <p class="text-gray-600 leading-relaxed mb-4">This page compares <strong>day styles</strong> cruise guests actually choose from Nassau. It does not invent star ratings, “most popular” claims, or live inventory.</p>
+    <p class="text-gray-600 leading-relaxed">Online request-to-book is available for one product: the <a class="text-ocean-700 font-semibold" href="/book/explore-nassau-walking-tour">Explore Nassau Walking Tour</a>. Payment creates a request — confirmation follows separately.</p>
   </div>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-6">{cards}</div>
 </section>
@@ -574,7 +575,7 @@ def build_port() -> None:
     <h2 class="text-2xl font-display font-bold text-gray-900 mb-4">Weather &amp; water caveats</h2>
     <p class="text-gray-600 leading-relaxed mb-8">Wind, rain, and sea state can alter snorkel and island boat days. Beaches remain public spaces with variable conditions. There are no wildlife or “perfect water” guarantees on this site.</p>
 
-    <p class="text-sm text-gray-500">Related: <a class="text-ocean-700 font-semibold" href="/one-day-in-nassau">One day in Nassau</a> · <a class="text-ocean-700 font-semibold" href="/nassau-beaches">Beaches</a> · <a class="text-ocean-700 font-semibold" href="/methodology">Methodology</a></p>
+    <p class="text-sm text-gray-500">Related: <a class="text-ocean-700 font-semibold" href="/book/explore-nassau-walking-tour">Explore Nassau Walking Tour</a> · <a class="text-ocean-700 font-semibold" href="/one-day-in-nassau">One day in Nassau</a> · <a class="text-ocean-700 font-semibold" href="/nassau-beaches">Beaches</a> · <a class="text-ocean-700 font-semibold" href="/methodology">Methodology</a></p>
   </div>
 </section>
 """,
@@ -776,8 +777,8 @@ def build_oneday() -> None:
       <h2 class="text-2xl font-display font-bold text-gray-900 mb-3">DIY downtown</h2>
       <p class="text-gray-600 leading-relaxed mb-6">A self-guided loop can cover harbour streets, market browsing, and a beach dip without pre-booking. Carry water, watch heat, and keep an eye on the clock — DIY has no operator “return plan.”</p>
       <h2 class="text-2xl font-display font-bold text-gray-900 mb-3">See Nassau on foot</h2>
-      <p class="text-gray-600 leading-relaxed mb-6">Guided walking suits guests who want context without a boat. A future simple walking request-to-book option may appear on this site; for now this remains editorial guidance only.</p>
-      <p class="text-sm text-gray-500">Deep links: <a class="text-ocean-700 font-semibold" href="/nassau-beaches">Beaches</a> · <a class="text-ocean-700 font-semibold" href="/atlantis-resort-excursions">Atlantis</a> · <a class="text-ocean-700 font-semibold" href="/nassau-private-tours">Private tours</a></p>
+      <p class="text-gray-600 leading-relaxed mb-4">Guided walking suits guests who want context without a boat. You can request the <a class="text-ocean-700 font-semibold" href="/book/explore-nassau-walking-tour">Explore Nassau Walking Tour</a> online — payment creates a booking request; confirmation is emailed separately.</p>
+      <p class="text-sm text-gray-500">Deep links: <a class="text-ocean-700 font-semibold" href="/book/explore-nassau-walking-tour">Book walking tour</a> · <a class="text-ocean-700 font-semibold" href="/nassau-beaches">Beaches</a> · <a class="text-ocean-700 font-semibold" href="/atlantis-resort-excursions">Atlantis</a> · <a class="text-ocean-700 font-semibold" href="/nassau-private-tours">Private tours</a></p>
     </div>
   </div>
 </section>
@@ -840,7 +841,7 @@ def build_trust_pages() -> None:
     <h2 class="text-xl font-display font-bold text-gray-900 mb-3">Email</h2>
     <p class="text-gray-600 leading-relaxed mb-4">For editorial questions about this planning guide, email <a class="text-ocean-700 font-semibold" href="mailto:{EMAIL}">{EMAIL}</a>.</p>
     <p class="text-gray-600 leading-relaxed mb-4">Include your ship date and the page you are asking about. Do not send payment card details by email.</p>
-    <p class="text-gray-600 leading-relaxed">Online booking is not active on this site yet. When a simple walking request-to-book option launches, it will be linked from the relevant planning pages.</p>
+    <p class="text-gray-600 leading-relaxed">You can request the <a class="text-ocean-700 font-semibold" href="/book/explore-nassau-walking-tour">Explore Nassau Walking Tour</a> online. For other questions about this planning guide, email <a class="text-ocean-700 font-semibold" href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 """,
         [("Home", "/"), ("Contact", "/contact")],
     )
@@ -865,7 +866,7 @@ def build_trust_pages() -> None:
         f"""
     <p class="text-gray-600 leading-relaxed mb-4">This is an editorial website. If you email {EMAIL}, we use your message only to reply.</p>
     <p class="text-gray-600 leading-relaxed mb-4">Standard hosting and security logs may be processed by our infrastructure providers. We do not sell personal information.</p>
-    <p class="text-gray-600 leading-relaxed">If online booking is added later, payment details will be handled on a hosted checkout — not collected through unstructured email.</p>
+    <p class="text-gray-600 leading-relaxed">Card payments for online booking requests are handled on a hosted Stripe checkout — not collected through unstructured email.</p>
 """,
         [("Home", "/"), ("Privacy", "/privacy")],
     )

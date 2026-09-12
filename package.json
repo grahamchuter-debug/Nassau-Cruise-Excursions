@@ -1,15 +1,29 @@
 {
   "name": "nassau-cruise-excursions",
   "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
     "build:css": "tailwindcss -i ./css/input.css -o ./css/utilities.css --minify && cat css/utilities.css css/site.components.css > css/site.css && cat css/a11y.css >> css/site.css",
-    "build:pages": "python3 scripts/build_nassau_pages.py",
+    "build:pages": "python3 scripts/build_nassau_pages.py && python3 scripts/generate-book-pages.py",
     "build": "npm run build:css && npm run build:pages",
     "deploy": "npm run build && wrangler deploy",
-    "preview": "python3 -m http.server 8899"
+    "preview": "python3 -m http.server 8899",
+    "test:booking": "npx --yes tsx --test shared/world-booking/booking.test.ts workers/bookings/src/operator-refund.test.ts",
+    "bookings:dev": "wrangler dev --config workers/bookings/wrangler.jsonc --port 8798",
+    "bookings:migrate:test": "wrangler d1 migrations apply nassau-bookings-test --remote --config workers/bookings/wrangler.jsonc",
+    "bookings:migrate:prod": "wrangler d1 migrations apply nassau-bookings-prod --remote --config workers/bookings/wrangler.prod.jsonc",
+    "bookings:deploy:test": "wrangler deploy --config workers/bookings/wrangler.jsonc",
+    "bookings:deploy:prod": "wrangler deploy --config workers/bookings/wrangler.prod.jsonc"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.17",
+    "typescript": "^5.9.3",
     "wrangler": "^4.94.0"
+  },
+  "dependencies": {
+    "stripe": "^22.6.1"
   }
 }

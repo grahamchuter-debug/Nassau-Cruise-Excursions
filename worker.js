@@ -10,8 +10,8 @@ const APEX_HOST = 'nassaucruiseexcursions.com';
 const LEGACY_REDIRECTS = {
   '/beaches': '/nassau-beaches',
   '/family-tours': '/best-nassau-cruise-excursions',
-  '/book': '/',
-  '/book.html': '/',
+  '/book': '/book/explore-nassau-walking-tour',
+  '/book.html': '/book/explore-nassau-walking-tour',
   '/swimming-pigs-excursions': '/best-nassau-cruise-excursions',
   '/swimming-pigs-excursions.html': '/best-nassau-cruise-excursions',
   '/nassau-faq': '/nassau-cruise-port-guide',

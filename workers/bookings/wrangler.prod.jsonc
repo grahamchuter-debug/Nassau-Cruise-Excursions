@@ -1,0 +1,32 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "nassau-bookings-prod",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "nassau-bookings-prod",
+      "database_id": "8fbfc8c8-48dd-46f0-9ed6-68a6d50b258b",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    "PAYMENTS_MODE": "live",
+    "BOOKINGS_ENABLED": "true",
+    "EMAIL_SENDING_ENABLED": "true",
+    "EMAIL_FROM": "bookings@notifications.wowatour.com",
+    "EMAIL_FROM_NAME": "Nassau Cruise Excursions",
+    "EMAIL_REPLY_TO": "hello@nassaucruiseexcursions.com",
+    "CORS_ALLOWED_ORIGINS": "https://nassaucruiseexcursions.com,https://www.nassaucruiseexcursions.com",
+    "SITE_BASE_URL": "https://nassaucruiseexcursions.com",
+    "ORIGINATING_SITE": "nassaucruiseexcursions.com",
+    "ORIGINATING_PORT": "Nassau, Bahamas",
+    "OPERATOR_PORTAL_BASE_URL": "https://nassau-bookings-prod.dark-violet-8d91.workers.dev",
+    "LIVE_PAYMENTS_UNLOCK": "NASSAU_LIVE_UNLOCK"
+  }
+}
