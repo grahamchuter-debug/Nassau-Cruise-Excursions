@@ -3,14 +3,14 @@
  * Internal supply references must never appear on customer pages.
  *
  * Gate values:
- * - PRODUCTION_READY_LOCKED — journey visible; live Pay & request disabled
+ * - BOOKING_ENABLED — journey visible; live Pay & request disabled
  * - BOOKING_ENABLED — live checkout allowed (requires Worker LIVE unlock too)
  */
 window.NAS_COMMERCIAL = {
   bookingsApiUrl: "https://nassau-bookings-prod.dark-violet-8d91.workers.dev",
   email: "hello@nassaucruiseexcursions.com",
   siteName: "Nassau Cruise Excursions",
-  defaultPublicBookingStatus: "PRODUCTION_READY_LOCKED",
+  defaultPublicBookingStatus: "BOOKING_ENABLED",
   cancellation:
     "Free cancellation outside 14 days before your excursion. From the 14th day before your excursion, bookings are non-refundable.",
   paymentNotConfirmation:
@@ -36,7 +36,7 @@ window.NAS_COMMERCIAL = {
       guestModel: "adult_child",
       durationLabel: "1 hour 30 minutes",
       maxGuests: 10,
-      publicBookingStatus: "PRODUCTION_READY_LOCKED",
+      publicBookingStatus: "BOOKING_ENABLED",
       displayPrice: "Adults $48 · Children (ages 4–12) $30 · Ages 0–3 contact us",
     },
   },

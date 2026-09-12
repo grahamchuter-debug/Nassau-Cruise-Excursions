@@ -334,7 +334,7 @@ def build_home() -> None:
         ),
         (
             "Can I book tours on this site yet?",
-            "A request-to-book journey for the Explore Nassau Walking Tour is prepared on this site. Live card checkout opens once payment rails are unlocked. Until then, email hello@nassaucruiseexcursions.com. Other day styles remain editorial planning guides.",
+            "Yes — you can request the Explore Nassau Walking Tour online. Payment creates a booking request; confirmation is emailed separately. If we cannot confirm, you receive a full refund. Other day styles remain editorial planning guides.",
         ),
     ]
     faq_schema = {
