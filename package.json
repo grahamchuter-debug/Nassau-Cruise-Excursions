@@ -2,11 +2,14 @@
   "name": "nassau-cruise-excursions",
   "private": true,
   "scripts": {
-    "build": "python3 scripts/build-nassau-site.py",
-    "deploy": "wrangler deploy",
-    "preview": "python3 -m http.server 8898"
+    "build:css": "tailwindcss -i ./css/input.css -o ./css/utilities.css --minify && cat css/utilities.css css/site.components.css > css/site.css && cat css/a11y.css >> css/site.css",
+    "build:pages": "python3 scripts/build_nassau_pages.py",
+    "build": "npm run build:css && npm run build:pages",
+    "deploy": "npm run build && wrangler deploy",
+    "preview": "python3 -m http.server 8899"
   },
   "devDependencies": {
+    "tailwindcss": "^3.4.17",
     "wrangler": "^4.94.0"
   }
 }
