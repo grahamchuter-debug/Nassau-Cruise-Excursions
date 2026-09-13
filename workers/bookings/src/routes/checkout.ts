@@ -277,10 +277,14 @@ export async function handleCreateCheckout(request: Request, env: Env): Promise<
   }
 
   const metadata: Record<string, string> = {
-    booking_ref: reference,
+    world_version: "2",
+    destination: product.destinationId.slice(0, 40),
+    booking_reference: reference.slice(0, 40),
+    booking_ref: reference.slice(0, 40),
     booking_session_id: body.bookingSessionId.slice(0, 40),
     product_id: product.id.slice(0, 40),
-    destination: product.destinationId.slice(0, 40),
+    booking_worker: paymentsMode === "live" ? "nassau-bookings-prod" : "nassau-bookings-test",
+    environment: paymentsMode === "live" ? "live" : "test",
     cruise_date: body.cruise.date,
     ship: body.cruise.shipName.slice(0, 80),
     guest_count: String(guestCount),

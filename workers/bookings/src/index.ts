@@ -26,6 +26,7 @@ import type { CreateBookingRequestInput } from "../../../shared/world-booking/ty
 import { corsHeaders, jsonResponse, withCors } from "./cors";
 import { formatMajorMoneyForEmail } from "./logic";
 import { handleCreateCheckout } from "./routes/checkout";
+import { handleGatewayStripeEvent } from "./routes/internal-stripe-event";
 import { handleOperatorConfirm, handleOperatorDecline } from "./routes/operator";
 import { handleOperatorReviewAction, handleOperatorReviewPage } from "./routes/operator-review";
 import { handleGetCheckoutSession } from "./routes/session";
@@ -82,6 +83,8 @@ const worker = {
       response = await handleGetCheckoutSession(request, env);
     } else if (url.pathname === "/api/stripe/webhook" && request.method === "POST") {
       response = await handleStripeWebhook(request, env, ctx);
+    } else if (url.pathname === "/api/internal/stripe-event" && request.method === "POST") {
+      response = await handleGatewayStripeEvent(request, env, ctx);
     } else if (url.pathname === "/api/bookings/operator/confirm" && request.method === "POST") {
       response = await handleOperatorConfirm(request, env);
     } else if (url.pathname === "/api/bookings/operator/decline" && request.method === "POST") {
